@@ -142,7 +142,7 @@ body {
     width: 120px;
     position: relative;
     left: 10%;
-    top: 20%;
+    top: 10%;
     transform: translate(-50%, -50%);
   }
   
@@ -441,8 +441,25 @@ body {
   .connect {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width : 50%;
+    position: relative;
+    left: 20%;
+    margin-top: 5rem;
     
   }
+
+  .connect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .connect-container > span {
+    padding-bottom: 2rem;
+  }
+
   button {
     position: relative;
     border: none;
@@ -531,4 +548,16 @@ body {
    
    button:focus:not(:focus-visible) {
     outline: none;
+   }
+
+   .presentation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .presentation-container{
+    padding: 2rem;
+    margin: 2rem;
+    border-right: #000 solid;
    }
