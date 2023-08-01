@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EmailController!{% endblock %}
+
+{% block body %}
+<h1>Edit Email</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.email) }} {# Render the 'name' field #}
+    <button type="submit">Save</button>
+    {{ form_end(form) }}
+{% endblock %}

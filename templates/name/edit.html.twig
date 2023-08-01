@@ -1,0 +1,14 @@
+{# templates/name/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Name{% endblock %}
+
+{% block body %}
+    <h1>Edit Name</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.username) }} {# Render the 'name' field #}
+    <button type="submit">Save</button>
+    {{ form_end(form) }}
+{% endblock %}

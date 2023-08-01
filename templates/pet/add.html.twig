@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add a New Pet{% endblock %}
+
+{% block body %}
+    <h1>Add a New Pet</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.height) }} {# Render the 'height' field #}
+    {{ form_row(form.weight) }} {# Render the 'weight' field #}
+    {{ form_row(form.categorised) }} {# Render the 'categorised' field #}
+    {{ form_row(form.picture) }} {# Render the 'picture' field #}
+    <button type="submit">Save</button>
+    {{ form_end(form) }}
+{% endblock %}

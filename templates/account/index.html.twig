@@ -19,15 +19,18 @@
     <div class="account-information">
         <h3>Name : </h3>
         <p>{{ user.getUsername() }}</p>
+        <a href="{{ path('app_name') }}">Modify</a>
 
         <h3>Email : </h3>
         <p>{{ user.getEmail() }}</p>
+        <a href="{{ path('app_email') }}">Modify</a>
 
         <h3>Pets : </h3>
         <ul>
-            {% for pets in user.getPets() %}
-            <li>{{ pets.name }}<li>
+            {% for pet in user.getPets() %}
+            <li>{{ pet.name }}<li>
             {% endfor %}
+            <a href="{{ path('app_pet') }}">Modify</a>
         </ul>
         
     </div>
