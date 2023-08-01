@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LoginController!{% endblock %}
+{% block title %}Hello AccountController!{% endblock %}
 
 {% block body %}
 <style>
@@ -8,10 +8,7 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+<div class="example-wrapper">
 
     <div>
         <h3>Profile Picture</h3>
@@ -21,17 +18,22 @@
 
     <div class="account-information">
         <h3>Name : </h3>
-        <p>{{ user.name }}</p>
+        <p>{{ user.getUsername() }}</p>
 
         <h3>Email : </h3>
-        <p>{{ user.email }}</p>
+        <p>{{ user.getEmail() }}</p>
 
         <h3>Pets : </h3>
         <ul>
-            {% for pets in user %}
+            {% for pets in user.getPets() %}
             <li>{{ pets.name }}<li>
             {% endfor %}
         </ul>
         
     </div>
+
+    <a href="{{path('app_logout')}}"> 
+    <button type="button" class="btn btn-primary">Log out</button>
+    </a>
+</div>
 {% endblock %}
