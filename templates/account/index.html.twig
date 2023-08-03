@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccountController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+    <div>
+        <h3>Profile Picture</h3>
+        <img src="">
+        </img>
+    </div>
+
+    <div class="account-information">
+        <h3>Name : </h3>
+        <p>{{ user.getUsername() }}</p>
+        <a href="{{ path('app_name') }}">Modify</a>
+
+        <h3>Email : </h3>
+        <p>{{ user.getEmail() }}</p>
+        <a href="{{ path('app_email') }}">Modify</a>
+
+        <h3>Pets : </h3>
+        <ul>
+            {% for pet in user.getPets() %}
+            <li>{{ pet.name }}<li>
+            {% endfor %}
+            <a href="{{ path('app_pet') }}">Modify</a>
+        </ul>
+        
+    </div>
+
+    <a href="{{path('app_logout')}}"> 
+    <button type="button" class="btn btn-primary">Log out</button>
+    </a>
+</div>
+{% endblock %}
