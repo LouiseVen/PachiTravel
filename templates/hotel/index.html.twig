@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HotelController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello ! ✅</h1>
+
+    
+    {{dump (hotels)}}
+
+    <div class="hotel-card-container">
+        {% for hotel in hotels %}
+
+            <div class ="hotel-card">
+                <h3>{{ hotel.name }}</h3>
+                <p>{{ hotel.city }}</p>
+                <p>{{ hotel.description }}</p>
+                <p>{{ hotel.price }}</p>
+            
+                {% if hotel.categorised == true %}
+                    <p>You can bring your big doggo !</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
