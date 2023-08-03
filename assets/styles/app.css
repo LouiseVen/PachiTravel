@@ -561,3 +561,18 @@ body {
     margin: 2rem;
     border-right: #000 solid;
    }
+
+   .categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   }
+
+   .category {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: #000;
+   }
