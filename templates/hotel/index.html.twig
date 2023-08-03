@@ -22,7 +22,10 @@
                 <p>{{ hotel.city }}</p>
                 <p>{{ hotel.description }}</p>
                 <p>{{ hotel.price }}</p>
-                <p>{{ hotel.categorised}}</p>
+            
+                {% if hotel.categorised == true %}
+                    <p>You can bring your big doggo !</p>
+                {% endif %}
             </div>
         {% endfor %}
     </div>
