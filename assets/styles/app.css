@@ -133,7 +133,7 @@ body {
   }
   
   html, body {
-    background: #1D4569;
+    /* background: #1D4569; */
     height: 100%;
     width: 100%;
   }
@@ -576,3 +576,18 @@ body {
     flex-wrap: wrap;
     border: #000;
    }
+
+   .header-primary {
+    margin: 10px;
+    margin-bottom: 20px;
+   }
+
+   .urgency {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .btn-danger {
+    height: 50px;
+  }
