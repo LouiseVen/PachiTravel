@@ -1,26 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainPageController!{% endblock %}
+{% block title %}Main Page{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello {{ user.username }}! </h1>
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ user.username }}! ✅</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/hotels" class="text-decoration-none">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hôtel</h5>
+                        </div>
+                    </div>
+                </a>
+                {% for i in range (0,5) %}
+                    <div class="card">
+                        <h6 class="card-title">{{ hotels[i].name }}</h6>
+                    </div>
+                {% endfor %}
+            </div>
 
-</div>
+            <div class="col-md-3">
+                <a href="/veterinarians" class="text-decoration-none">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Vétérinaire</h5>
+                        </div>
+                    </div>
+                    {% for i in range (0,5) %}
+                    <div class="card">
+                        <h6 class="card-title">{{ veterinarians[i].name }}</h6>
+                    </div>
+                {% endfor %}
+                </a>
+            </div>
 
-<div class="categories">
-    <a href="/hotels">
-        <div class="category"><h3>Hôtel</h3></div>
-    </a>
-    <a href="/travel">
-        <div class="category"><h3>Travel</h3></div>
-    </a>
-    <div class="category"><h3>Lorem Ipsum</h3></div>
-    <div class="category"><h3>Lorem Ipsum</h3></div>
-</div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem Ipsum</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem Ipsum</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
