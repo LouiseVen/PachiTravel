@@ -1,33 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HotelController!{% endblock %}
+{% block title %}Hotels{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello ! ✅</h1>
-
-    
-    {{dump (hotels)}}
-
-    <div class="hotel-card-container">
-        {% for hotel in hotels %}
-
-            <div class ="hotel-card">
-                <h3>{{ hotel.name }}</h3>
-                <p>{{ hotel.city }}</p>
-                <p>{{ hotel.description }}</p>
-                <p>{{ hotel.price }}</p>
-            
-                {% if hotel.categorised == true %}
-                    <p>You can bring your big doggo !</p>
-                {% endif %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2>Hotels</h2>
+                </div>
+                <div class="card-body">
+                    <div class="hotel-card-container">
+                        {% for hotel in hotels %}
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ hotel.name }}</h3>
+                                    <p class="card-text">{{ hotel.city }}</p>
+                                    <p class="card-text">{{ hotel.description }}</p>
+                                    <p class="card-text">{{ hotel.price }}</p>
+                                    {% if hotel.categorised == true %}
+                                        <p class="card-text">You can bring your big doggo!</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-        {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

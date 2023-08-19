@@ -1,0 +1,93 @@
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0 bg-secondary" href="{{ path('app_home') }}">
+            <img
+                src="{{ asset('build/images/logo.png') }}"
+                height="30"
+                alt="Pachi Travel Logo"
+                loading="lazy"
+            />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link" href="/account">Account</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">La Pachi Team</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/hotel">Hôtels</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Vétérinaires</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Lieux Pets-Friendly</a>
+            </li>
+        </ul>
+        <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+    
+        <!-- Avatar -->
+        <div class="dropdown">
+            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+    
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </a>
+        </div>
+
+        <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+    </nav>
+     <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('build/images/banner.jpg');
+      height: 400px;
+    "
+  >
+  <div class="mask header-primary">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-black">
+          <h1 class="mb-3">Pachi Travel</h1>
+          <h4 class="mb-3">Mieux voyager avec vos animaux</h4>
+        </div>
+      </div>
+    </div>
+
+    {# Urgences #}
+
+    <div class="urgency">
+    <a href="/urgences">
+      <button type="button" class="btn btn-danger ">Urgences vétérinaires</button>
+    </a>
+    </div>
